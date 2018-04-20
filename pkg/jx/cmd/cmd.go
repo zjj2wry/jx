@@ -5,9 +5,10 @@ import (
 
 	cmdutil "github.com/jenkins-x/jx/pkg/jx/cmd/util"
 
+	"strings"
+
 	"github.com/jenkins-x/jx/pkg/jx/cmd/templates"
 	"github.com/spf13/cobra"
-	"strings"
 )
 
 const (
@@ -26,7 +27,9 @@ func NewJXCommand(f cmdutil.Factory, in io.Reader, out, err io.Writer) *cobra.Co
 	cmds := &cobra.Command{
 		Use:   "jx",
 		Short: "jx is a command line tool for working with Jenkins X",
-		Long: `
+		Long: `jx is a command line tool for working with Jenkins X
+
+Find more information at: http://jenkins-x.io/commands/jx/
  `,
 		Run: runHelp,
 		/*
